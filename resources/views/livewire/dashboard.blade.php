@@ -14,10 +14,10 @@
                         <div class="card-body">
                             <div class="row align-items-center">
                                 <div class="col-md-8">
-                                    <h5>Total Diterima :</h5>
+                                    <h6>Total Diterima :</h6>
                                 </div>
                                 <div class="col-md-4">
-
+                                    <h6>{{ $count_diterima }}</h6>
                                 </div>
                             </div>
                         </div>
@@ -28,10 +28,10 @@
                         <div class="card-body">
                             <div class="row align-items-center">
                                 <div class="col-md-8">
-                                    <h5>Total Dicuci :</h5>
+                                    <h6>Total Dicuci :</h6>
                                 </div>
                                 <div class="col-md-4">
-
+                                    <h6>{{ $count_dicuci }}</h6>
                                 </div>
                             </div>
                         </div>
@@ -42,10 +42,10 @@
                         <div class="card-body">
                             <div class="row align-items-center">
                                 <div class="col-md-8">
-                                    <h5>Total Dikeringkan :</h5>
+                                    <h6>Total Dikeringkan :</h6>
                                 </div>
                                 <div class="col-md-4">
-
+                                    <h6>{{ $count_dikeringkan }}</h6>
                                 </div>
                             </div>
                         </div>
@@ -56,10 +56,10 @@
                         <div class="card-body">
                             <div class="row align-items-center">
                                 <div class="col-md-8">
-                                    <h5>Total Disetrika :</h5>
+                                    <h6>Total Disetrika :</h6>
                                 </div>
                                 <div class="col-md-4">
-
+                                    {{-- <h6>{{ $count_disetrika }}</h6> --}}
                                 </div>
                             </div>
                         </div>
@@ -73,7 +73,7 @@
                                     <h5>Total Pandding :</h5>
                                 </div>
                                 <div class="col-md-4">
-
+                                    <h6>{{ $count_dimenunggu_pembayaran }}</h6>
                                 </div>
                             </div>
                         </div>
@@ -87,7 +87,7 @@
                                     <h5>Total Selesai :</h5>
                                 </div>
                                 <div class="col-md-4">
-
+                                    {{-- <h6>{{ $count_diselesai }}</h6> --}}
                                 </div>
                             </div>
                         </div>
@@ -115,17 +115,16 @@
                         </tr>
                     </thead>
                     <tbody>
-                        {{-- @foreach ($collection as $item)
-                            
+                        {{-- @foreach ($selesai as $item)
+                            <tr>
+                                <th scope="row">{{ $loop->iteration }}</th>
+                                <td>{{ $item->barang->user->name }}</td>
+                                <td>Rp. {{ number_format($item->total_bayar) }}</td>
+                                <td>{{ $item->layanan->nama }}</td>
+                                <td>{{ \Carbon\Carbon::parse($item->tanggal_diterima)->format('d m Y, H:i') }}</td>
+                                <td>{{ \Carbon\Carbon::parse($item->tanggal_diambil)->format('d m Y, H:i') }}</td>
+                            </tr>
                         @endforeach --}}
-                        <tr>
-                            <th scope="row">1</th>
-                            <td></td>
-                            <td>Rp. </td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                        </tr>
                     </tbody>
                   </table>
             </div>

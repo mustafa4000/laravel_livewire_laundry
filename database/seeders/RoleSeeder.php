@@ -46,7 +46,7 @@ class RoleSeeder extends Seeder
             'alamat' => 'jl. gajah'
         ]);
 
-        // konsumen
+        // komsumen
         $role = Role::create([
             'nama' => 'konsumen'
         ]);

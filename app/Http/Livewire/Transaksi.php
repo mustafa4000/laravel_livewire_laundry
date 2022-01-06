@@ -86,7 +86,7 @@ class Transaksi extends Component
                 'status' => 0
             ]);
 
-            Mail::to($this->email)->send(new TransaksiMail($transaksi));
+            // Mail::to($this->email)->send(new TransaksiMail($transaksi));
 
             session()->flash('sukses', 'Data berhasil ditambahkan.');
             return redirect('/progres');
